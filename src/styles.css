@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    padding:40px;
+    background: rgba(209, 131, 118, 0.304);
+  
+}
+
+input{
+    margin: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    font-size: 22px;
+}
+
+input:hover{
+    background: rgba(128, 128, 128, 0.164);
+    color: white;
+}
+.heading{
+
+}

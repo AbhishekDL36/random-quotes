@@ -4,6 +4,7 @@ import './styles.css'
 function App() {
  const [quotes,setQuotes]=  useState([])
  const [word,setWord] = useState("")
+ const [liked,setLiked] = useState(false)
  useEffect(()=>{
  async function getQuotes(){
   let values= await fetch('https://dummyjson.com/quotes') 
@@ -46,7 +47,13 @@ function App() {
       : <p></p>
     }
     {quotes.map((quote,index)=>( 
-    <p key={index}>{quote}</p>
+    <p key={index} className="quotes">{quote} 
+    {
+      liked? <button>❤️</button>
+      : <button onClick={()=>setLiked(true)}>  𖹭   </button>
+    }
+    
+    </p>
   )) }
   </div>
   ):<p>Loading...</p>

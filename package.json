@@ -1,19 +1,19 @@
 {
-<<<<<<< HEAD
+
   "name": "random-quote-generator",
-=======
-  "name": "random-quotation-generator",
->>>>>>> a41e3862abd85a26a669fee9687bcca4ed85f233
+
+ 
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
+
     "react-router-dom": "^7.1.1",
-=======
->>>>>>> a41e3862abd85a26a669fee9687bcca4ed85f233
+
+
     "react-scripts": "5.0.1"
   },
   "scripts": {

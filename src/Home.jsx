@@ -1,10 +1,25 @@
- import { useEffect, useState } from "react";
+ import React, { useEffect, useState } from "react";
 
  
  function Home() {
   const [quotes,setQuotes]=  useState([])
   const [word,setWord] = useState("")
-  const [liked,setLiked] = useState(false)
+
+  const [likedQuotes,setLikedQuotes] = useState(Array(quotes.length).fill(false))
+    const [likedQuotations,setLikedQuotations] = useState([])
+  
+  const handleLike= (index)=>{
+    const updatedLikes= [...likedQuotes]
+    updatedLikes[index] = !updatedLikes[index]
+    setLikedQuotes(updatedLikes)
+    // let val=[]
+
+   let likedQuotation=  quotes.filter((quote,index)=>{
+        return updatedLikes[index]
+    })
+
+    console.log(likedQuotation)
+  }
   useEffect(()=>{
   async function getQuotes(){
    let values= await fetch('https://dummyjson.com/quotes') 
@@ -49,10 +64,9 @@
      }
      {quotes.map((quote,index)=>( 
      <p key={index} className="quotes">{quote} 
-     {
-       liked? <button>❤️</button>
-       : <button onClick={()=>setLiked(true)}>  𖹭   </button>
-     }
+     <button onClick={() => handleLike(index)}>
+                {likedQuotes[index] ? "❤️" : "𖹭"}
+              </button>
      
      </p>
    )) }
@@ -63,4 +77,4 @@
    );
  }
  
- export default Home;
+ export default React.memo(Home) ;

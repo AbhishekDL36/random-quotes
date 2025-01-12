@@ -1,10 +1,10 @@
-function LikedQuotes({liked}){
+function Addquotes({liked}){
     console.log(liked)
     return(
         <div className="homediv">
-        <p>likedquotes</p>
+        <p>added quotes</p>
         </div>
     )
 }
 
-export default LikedQuotes
+export default Addquotes

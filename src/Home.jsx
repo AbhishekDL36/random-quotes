@@ -18,7 +18,7 @@
         return updatedLikes[index]
     })
 setLikedQuotations(likedQuotation)
-getLikedQuotation(likedQuotation)
+getLikedQuotation(likedQuotations)
     console.log(likedQuotation)
   }
   useEffect(()=>{
@@ -47,7 +47,7 @@ getLikedQuotation(likedQuotation)
  
    getQuotes()
    
-  },[quotes])
+  },[])
  
   
    return (

@@ -21,6 +21,12 @@ setLikedQuotations(likedQuotation)
 getLikedQuotation(likedQuotations)
     console.log(likedQuotation)
   }
+
+  useEffect(()=>{
+    localStorage.setItem('storeLiked',JSON.stringify(likedQuotations))
+  },[likedQuotations])
+
+  
   useEffect(()=>{
   async function getQuotes(){
    let values= await fetch('https://dummyjson.com/quotes') 

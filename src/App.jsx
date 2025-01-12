@@ -7,7 +7,7 @@ import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import LikedQuotes from './Likedquotes';
 import AddQuotes from './Add-quotes';
 function App() {
- const [liked,setLiked] = useState([])
+ const [liked,setLiked] = useState(["heyy"])
 function getLikedQuotation(val){
 setLiked(val)
 }

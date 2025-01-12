@@ -76,7 +76,7 @@ getLikedQuotation(likedQuotations)
      </p>
    )) }
    </div>
-   ):<p>Loading...</p>
+   ):<p className="spinner"></p>
  }
      </div>
    );

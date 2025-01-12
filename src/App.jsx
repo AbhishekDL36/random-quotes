@@ -19,7 +19,22 @@ function App() {
 
 
 function getLikedQuotation(val){
-setLiked(val)
+  if(liked.length>0){
+    setLiked((prev)=>{const updatedlike = [...prev]
+
+      val.forEach((e)=>{
+        if(!updatedlike.includes(e)){
+    updatedlike.push(e)
+        }
+    
+      })
+      return updatedlike;
+    })
+  }
+  else{
+    setLiked(val)
+  }
+
 console.log("received from home",val)
 }
 

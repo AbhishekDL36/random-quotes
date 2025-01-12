@@ -60,6 +60,8 @@ padding-left:700px;
     margin: 80px;
     text-align: center;
     font-weight: 800;
+    height: 100%;
+
 }
 
 .quotations{
@@ -85,5 +87,29 @@ padding-left:700px;
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  .quotes1{
+    margin-top: 30px;
+  }
+
+  .page{
+    height: 100vh;
+
+  }
+
+  .heading{
+    margin-top: 20px;
+  }
+
+  .rembtn{
+    font-size: 10px;
+    margin-left: 30px;
+  }
+
+  .addbtn{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
   }
   

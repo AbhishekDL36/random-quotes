@@ -8,16 +8,27 @@ function LikedQuotes(){
 let arr= JSON.parse(array)
 setVal(arr)
   },[array])
+
+  function removeLiked(index){
+console.log(index)
+let arr= [...val]
+arr.splice(index,1)
+setVal(arr)
+  }
 console.log("val------------------------------",val)
     return(
-        <div className="homediv">
-            
-        {
+        <div className="homediv page">
+            <h1 className="heading">YOUR LIKED QUOTES</h1>
+      <div >
+      {
             val.length>0? val.map((likedquote,index)=>{
-                return <p key={index}>{likedquote}</p>
+                return <p key={index} className="quotes1">{likedquote}
+                <button className="rembtn" onClick={()=>removeLiked(index)}>(remove)</button>
+                </p>
             })
             : <p>no liked quotation</p>
         }
+        </div>  
         </div>
     )
 }

@@ -1,18 +1,20 @@
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './Home';
 import './styles.css'
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import LikedQuotes from './Likedquotes';
 import AddQuotes from './Add-quotes';
 function App() {
- const [liked,setLiked] = useState(["heyy"])
+ const [liked,setLiked] = useState([])
 function getLikedQuotation(val){
 setLiked(val)
 }
 
- 
+  useEffect(()=>{
+     localStorage.setItem('storeLiked',JSON.stringify(liked))
+   },[liked])
   return (
 
 

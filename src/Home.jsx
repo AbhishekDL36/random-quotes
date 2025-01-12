@@ -17,9 +17,9 @@
    let likedQuotation=  quotes.filter((quote,index)=>{
         return updatedLikes[index]
     })
-setLikedQuotations(likedQuotation)
+           
 getLikedQuotation(likedQuotations)
-    console.log(likedQuotation)
+setLikedQuotations(likedQuotation)
   }
 
  
@@ -31,11 +31,9 @@ getLikedQuotation(likedQuotations)
    let res= await values.json()
   
    console.log(res.quotes)
-   let val=[]
+   let val=res.quotes.map((e)=>e.quote)
    
-     for(let i=0; i<res.quotes.length;i++){
-       val.push(res.quotes[i].quote)
-     }
+    
      setQuotes(val)
      if(word.trim() != ""){
      let newArray=  val.filter((value)=>{

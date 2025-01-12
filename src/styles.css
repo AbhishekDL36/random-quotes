@@ -112,4 +112,8 @@ padding-left:700px;
     padding: 10px;
     border-radius: 8px;
   }
+
+  .addbtn:hover{
+    background: rgb(225, 220, 220);
+  }
   

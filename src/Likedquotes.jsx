@@ -7,6 +7,7 @@ function LikedQuotes(){
   useEffect(()=>{
 let arr= JSON.parse(array)
 setVal(arr)
+
   },[array])
 
   function removeLiked(index){
@@ -14,6 +15,7 @@ console.log(index)
 let arr= [...val]
 arr.splice(index,1)
 setVal(arr)
+
   }
 console.log("val------------------------------",val)
     return(

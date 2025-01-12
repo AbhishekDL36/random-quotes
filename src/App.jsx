@@ -7,6 +7,7 @@ import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import LikedQuotes from './Likedquotes';
 import AddQuotes from './Add-quotes';
 function App() {
+   const [quotes,setQuotes]=  useState([])
  const [liked,setLiked] = useState(() => {
   try {
     const storedLikes = localStorage.getItem("storeLiked");
@@ -16,6 +17,7 @@ function App() {
     return [];
   }
 })
+
 
 
 function getLikedQuotation(val){
@@ -64,9 +66,9 @@ console.log("received from home",val)
   </nav>
 
   <Routes>
-    <Route path="/" element={<Home getLikedQuotation={getLikedQuotation} />} />
+    <Route path="/" element={<Home getLikedQuotation={getLikedQuotation} quotes={quotes} setQuotes={setQuotes} />} />
     <Route path="/Liked-quotes" element={<LikedQuotes liked={liked} />} />
- <Route path='/Add-quotations' element={<AddQuotes/>}/>
+ <Route path='/Add-quotations' element={<AddQuotes  setQuotes={setQuotes} quotes={quotes}/>}/>
   </Routes>
 
 </BrowserRouter>

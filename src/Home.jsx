@@ -1,8 +1,8 @@
  import React, { useEffect, useState } from "react";
 
  
- function Home({getLikedQuotation}) {
-  const [quotes,setQuotes]=  useState([])
+ function Home({getLikedQuotation,quotes,setQuotes}) {
+ 
   const [word,setWord] = useState("")
 
   const [likedQuotes,setLikedQuotes] = useState(Array(quotes.length).fill(false))
@@ -34,8 +34,8 @@ getLikedQuotation(likedQuotation)
    console.log(res.quotes)
    let val=res.quotes.map((e)=>e.quote)
    
+   setQuotes((prev) => [...new Set([...prev, ...val])]);
     
-     setQuotes(val)
      if(word.trim() != ""){
      let newArray=  val.filter((value)=>{
          return value.toLowerCase().includes(word.toLowerCase())

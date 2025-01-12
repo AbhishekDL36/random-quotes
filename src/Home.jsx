@@ -1,7 +1,7 @@
  import React, { useEffect, useState } from "react";
 
  
- function Home() {
+ function Home({getLikedQuotation}) {
   const [quotes,setQuotes]=  useState([])
   const [word,setWord] = useState("")
 
@@ -17,7 +17,8 @@
    let likedQuotation=  quotes.filter((quote,index)=>{
         return updatedLikes[index]
     })
-
+setLikedQuotations(likedQuotation)
+getLikedQuotation(likedQuotation)
     console.log(likedQuotation)
   }
   useEffect(()=>{

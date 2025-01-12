@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    padding-top:10px;
+    background: rgba(209, 131, 118, 0.304);
+  height: auto;
+}
+
+input{
+    margin: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    font-size: 22px;
+}
+
+input:hover{
+    background: rgba(128, 128, 128, 0.164);
+    color: white;
+}
+.quotes{
+    margin-top: 10px;
+}
+
+button{
+    background: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+nav{
+    padding: 20px;
+  width: 100vw;
+    position: fixed;
+    background: white;
+
+
+}
+
+.flex1{
+    margin-left: 800px;
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex1>button{
+    color:coral;
+    text-shadow: 2px 2px 4px black;
+}
+.homediv{
+    margin: 80px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.quotations{
+    font-size: 30px;
+}

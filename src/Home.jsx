@@ -6,20 +6,21 @@
   const [word,setWord] = useState("")
 
   const [likedQuotes,setLikedQuotes] = useState(Array(quotes.length).fill(false))
-    const [likedQuotations,setLikedQuotations] = useState([])
+
   
   const handleLike= (index)=>{
     const updatedLikes= [...likedQuotes]
     updatedLikes[index] = !updatedLikes[index]
     setLikedQuotes(updatedLikes)
-    // let val=[]
+   
 
    let likedQuotation=  quotes.filter((quote,index)=>{
         return updatedLikes[index]
     })
            
-getLikedQuotation(likedQuotations)
-setLikedQuotations(likedQuotation)
+
+
+getLikedQuotation(likedQuotation)
   }
 
  

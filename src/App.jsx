@@ -16,8 +16,11 @@ function App() {
     return [];
   }
 })
+
+
 function getLikedQuotation(val){
 setLiked(val)
+console.log("received from home",val)
 }
 
   useEffect(()=>{

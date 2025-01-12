@@ -8,10 +8,10 @@ function LikedQuotes(){
 let arr= JSON.parse(array)
 setVal(arr)
   },[array])
-console.log(val)
+console.log("val------------------------------",val)
     return(
         <div className="homediv">
-            hi
+            
         {
             val.length>0? val.map((likedquote,index)=>{
                 return <p key={index}>{likedquote}</p>
